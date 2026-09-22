@@ -46,6 +46,24 @@ div {
   font-size: 1em;
 }
 
+.priority {
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.priority-low {
+  background-color: green;
+}
+
+.priority-medium {
+  background-color: goldenrod;
+}
+
+.priority-high {
+  background-color: red;
+}
+
 button {
   border: none;
   border-radius: 3px;
@@ -70,7 +88,7 @@ button {
   color: red;
 }
 
-input[type=text], input[type=date] {
+input[type=text], input[type=date], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
