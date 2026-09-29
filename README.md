@@ -1,3 +1,3 @@
 # react-basics-labs
 
-Labs for Web Deveelopment 2
+Labs for Web Development 2
