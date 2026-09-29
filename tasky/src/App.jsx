@@ -9,6 +9,7 @@ import Grid from '@mui/material/Grid';
 
 
 
+
 function App() {
 
   const formChangeHandler = (event) => {
@@ -85,12 +86,13 @@ function App() {
           align="center"
           gutterBottom
           sx={{
-            backgroundColor: 'gray',
+            backgroundColor: 'primary.main',
             textAlign: 'center',
             color: 'white',
             padding: '20px',
             margin: '20px 0 40px 0',
-            borderRadius: '4px'
+            borderRadius: '8px',
+            p: 2
           }}
         >
           Tasky
@@ -102,7 +104,7 @@ function App() {
       <Container maxWidth="md" component="main">
         <Grid
           container
-          spacing={5}
+          spacing={3}
           sx={{
             justifyContent: "center"
           }}

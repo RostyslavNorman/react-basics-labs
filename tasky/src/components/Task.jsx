@@ -6,6 +6,10 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import CheckIcon from '@mui/icons-material/Check';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 
 
@@ -15,7 +19,7 @@ const Task = (props) => {
     return (
         <Grid
             key={props.id}
-            size={{ xs: 12, md: 4 }}
+            size={{ xs: 12,  sm: 6, md: 4 }}
         >
             <Card
                 sx={{
@@ -60,6 +64,19 @@ const Task = (props) => {
                     >
                         {props.description}
                     </Typography>
+                    <Box sx={{display:'flex', justifyContent:'center'}}>
+                    <FormControlLabel
+                        control={
+                            <Checkbox
+                                checked={props.done}
+                                onChange={props.markDone}
+                                color="success"
+                            />
+                        }
+                        label="Done"
+                    />
+                    </Box>
+
                 </CardContent>
 
                 <CardActions
@@ -72,6 +89,7 @@ const Task = (props) => {
                         variant="contained"
                         size="small"
                         color="success"
+                        startIcon={<CheckIcon />}
                         onClick={props.markDone}
                     >
                         Done
@@ -81,6 +99,7 @@ const Task = (props) => {
                         variant="contained"
                         size="small"
                         color="error"
+                        startIcon={<DeleteIcon />}
                         onClick={props.deleteTask}
                     >
                         Delete
